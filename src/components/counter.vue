@@ -1,7 +1,8 @@
 <template>
     <div>
         <h2>Counter</h2>
-        Counter: {{counter}}
+        Counter: {{counter}} <br>
+        doubeldCounter: {{doubeldCounter}} <br>
 
         <button @click="increase">Increase</button>
         <button @click="decrease">Decrease</button>
@@ -13,6 +14,9 @@ export default {
     computed:{
         counter(){
             return this.$store.state.counter;
+        },
+        doubeldCounter(){
+            return this.$store.getters.doubeldCounter;
         }
     },
     methods: {
