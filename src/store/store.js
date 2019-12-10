@@ -1,5 +1,6 @@
 import Vue from "vue"
 import Vuex from "vuex"
+import {likesModule} from "./likesModule"
 
 Vue.use(Vuex);
 
@@ -44,7 +45,10 @@ const store = new Vuex.Store({
                 context.commit('increase');
             },1000);
         }
-    }
+    },
+   modules: {
+    likes: likesModule
+   }
 });
 
 export default store;
