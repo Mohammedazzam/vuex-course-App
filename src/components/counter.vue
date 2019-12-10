@@ -8,6 +8,7 @@
         <button @click="increase">Increase</button>
         <button @click="decrease">Decrease</button>
         <button @click="n_increase">+5</button>
+        <button @click="n_increase_after_1_sec">n_increase_after_1_sec</button>
     </div>
 </template>
 
@@ -28,6 +29,9 @@ export default {
                 amount:5
             });
         },
+        n_increase_after_1_sec(){
+            this.$store.dispatch('increase1Secound')
+        }
     }
 }
 </script>
