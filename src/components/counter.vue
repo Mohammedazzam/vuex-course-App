@@ -11,14 +11,10 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex"
 export default {
     computed:{
-        counter(){
-            return this.$store.state.counter;
-        },
-        doubeldCounter(){
-            return this.$store.getters.doubeldCounter;
-        },
+       ... mapGetters(["counter","doubeldCounter"]),
          multiCounter(){
             return this.$store.getters.multiCounter(3);
         }
