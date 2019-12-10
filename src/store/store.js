@@ -39,9 +39,9 @@ const store = new Vuex.Store({
         //     },1000);
         // }
 
-        increase1Secound({commit}){
+        increase1Secound(context){
             setTimeout (function(){ //function هذه طريقة ال  
-                commit('increase');
+                context.commit('increase');
             },1000);
         }
     }
