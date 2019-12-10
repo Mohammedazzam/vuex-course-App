@@ -21,10 +21,10 @@ export default {
     },
     methods: {
         increase (){
-            this.$store.state.counter ++;
+            this.$store.commit("increase");
         },
         decrease (){
-            this.$store.state.counter --;
+            this.$store.commit("decrease");
         }
     }
 }

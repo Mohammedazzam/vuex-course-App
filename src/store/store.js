@@ -11,13 +11,21 @@ const store = new Vuex.Store({
         counter(state){
             return state.counter;
         },
-        
+
         doubeldCounter(state){
             return state.counter*2;
         },
 
         multiCounter :(state)=> (multi) =>{
             return state.counter* multi;
+        }
+    },
+    mutations:{
+        increase(state){
+            state.counter ++;
+        },
+        decrease(state){
+            state.counter --
         }
     }
 });
