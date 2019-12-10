@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import {mapGetters} from "vuex"
+import {mapGetters,mapMutations} from "vuex"
 export default {
     computed:{
        ... mapGetters(["counter","doubeldCounter"]),
@@ -21,12 +21,8 @@ export default {
         }
     },
     methods: {
-        increase (){
-            this.$store.commit("increase");
-        },
-        decrease (){
-            this.$store.commit("decrease");
-        },
+        ... mapMutations(["increase","decrease"]),
+
         n_increase (){
             this.$store.commit("n_increase",5);
         },
