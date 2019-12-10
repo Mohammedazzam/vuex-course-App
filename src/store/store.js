@@ -26,7 +26,10 @@ const store = new Vuex.Store({
         },
         decrease(state){
             state.counter --
-        }
+        },
+        n_increase(state,n){
+            state.counter += n
+        },
     }
 });
 
