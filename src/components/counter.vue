@@ -24,7 +24,9 @@ export default {
         ... mapMutations(["increase","decrease"]),
 
         n_increase (){
-            this.$store.commit("n_increase",5);
+            this.$store.commit("n_increase",{
+                amount:5
+            });
         },
     }
 }
